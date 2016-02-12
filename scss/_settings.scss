@@ -44,22 +44,23 @@
 // 1. Global
 // ---------
 
-$global-font-size: 100%;
-$global-width: rem-calc(1200);
-$global-lineheight: 1.5;
-$primary-color: #2199e8;
-$secondary-color: #777;
-$success-color: #3adb76;
+$global-font-size: 14px;
+$global-width: rem-calc(960);
+$global-lineheight: 1.7;
+$primary-color: #ff742c;
+$secondary-color: #7accc8;
+$success-color: #a3d39c;
 $warning-color: #ffae00;
 $alert-color: #ec5840;
 $light-gray: #e6e6e6;
-$medium-gray: #cacaca;
+$medium-gray: #595959;
 $dark-gray: #8a8a8a;
+$dark-blue:#0D131A;
 $black: #0a0a0a;
-$white: #fefefe;
-$body-background: $white;
-$body-font-color: $black;
-$body-font-family: 'Helvetica Neue', Helvetica, Roboto, Arial, sans-serif;
+$white: #f3f3f3;
+$body-background: #f6f5f2;
+$body-font-color: $medium-gray;
+$body-font-family: Tahoma, Arial, sans-serif;
 $body-antialiased: true;
 $global-margin: 1rem;
 $global-padding: 1rem;
@@ -86,8 +87,7 @@ $breakpoint-classes: (small medium large);
 $grid-row-width: $global-width;
 $grid-column-count: 12;
 $grid-column-responsive-gutter: (
-  small: 20px,
-  medium: 30px,
+  small: 20px
 );
 $grid-column-align-edge: true;
 $block-grid-max: 8;
@@ -95,13 +95,13 @@ $block-grid-max: 8;
 // 4. Base Typography
 // ------------------
 
-$header-font-family: $body-font-family;
+$header-font-family: 'Raleway', sans-serif;
 $header-font-weight: $global-weight-normal;
 $header-font-style: normal;
 $font-family-monospace: Consolas, 'Liberation Mono', Courier, monospace;
 $header-sizes: (
   small: (
-    'h1': 24,
+    'h1': 22,
     'h2': 20,
     'h3': 19,
     'h4': 18,
@@ -109,8 +109,8 @@ $header-sizes: (
     'h6': 16,
   ),
   medium: (
-    'h1': 48,
-    'h2': 40,
+    'h1': 40,
+    'h2': 25,
     'h3': 31,
     'h4': 25,
     'h5': 20,
@@ -226,14 +226,14 @@ $breadcrumbs-item-slash: true;
 // 11. Button
 // ----------
 
-$button-padding: 0.85em 1em;
-$button-margin: 0 0 $global-margin 0;
+$button-padding: 0 20px;
+$button-margin: 0 0 0 0;
 $button-fill: solid;
-$button-background: $primary-color;
+$button-background: $secondary-color;
 $button-background-hover: scale-color($button-background, $lightness: -15%);
 $button-color: #fff;
 $button-color-alt: #000;
-$button-radius: $global-radius;
+$button-radius: 3px;
 $button-sizes: (
   tiny: 0.6rem,
   small: 0.75rem,
@@ -334,20 +334,20 @@ $form-label-line-height: 1.8;
 $select-background: $white;
 $select-triangle-color: #333;
 $select-radius: $global-radius;
-$input-color: $black;
-$input-font-family: inherit;
-$input-font-size: rem-calc(16);
-$input-background: $white;
-$input-background-focus: $white;
+$input-color: $white;
+$input-font-family: #fff;
+$input-font-size: rem-calc(15);
+$input-background: $dark-blue;
+$input-background-focus: lighten($dark-blue, 30%);
 $input-background-disabled: $light-gray;
-$input-border: 1px solid $medium-gray;
-$input-border-focus: 1px solid $dark-gray;
-$input-shadow: inset 0 1px 2px rgba($black, 0.1);
-$input-shadow-focus: 0 0 5px $medium-gray;
+$input-border: none;
+$input-border-focus: none;
+$input-shadow: 0 2px 0 rgba($black, 0.2);
+$input-shadow-focus: 0 2px 0 rgba($black, 0.2);
 $input-cursor-disabled: default;
 $input-transition: box-shadow 0.5s, border-color 0.25s ease-in-out;
 $input-number-spinners: true;
-$input-radius: $global-radius;
+$input-radius: 3px;
 
 // 20. Label
 // ---------
@@ -370,7 +370,7 @@ $mediaobject-image-width-stacked: 100%;
 
 $menu-margin: 0;
 $menu-margin-nested: 1rem;
-$menu-item-padding: 0.7rem 1rem;
+$menu-item-padding: 0 rem-calc(23);
 $menu-icon-spacing: 0.25rem;
 $menu-expand-max: 6;
 
@@ -543,7 +543,7 @@ $tooltip-radius: $global-radius;
 // -----------
 
 $topbar-padding: 0.5rem;
-$topbar-background: $light-gray;
+$topbar-background: #232d3d;
 $topbar-title-spacing: 1rem;
 $topbar-input-width: 200px;
 

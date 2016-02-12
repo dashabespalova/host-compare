@@ -3,6 +3,9 @@
 @import 'settings';
 @import 'foundation/foundation';
 
+@import url(https://fonts.googleapis.com/css?family=Raleway:400,600,300,700);
+@import url(https://fonts.googleapis.com/css?family=Quicksand:400,700);
+
 @include foundation-global-styles;
 @include foundation-grid;
 @include foundation-typography;
@@ -10,44 +13,384 @@
 @include foundation-forms;
 @include foundation-visibility-classes;
 @include foundation-float-classes;
-@include foundation-accordion;
-@include foundation-accordion-menu;
-@include foundation-badge;
-@include foundation-breadcrumbs;
-@include foundation-button-group;
-@include foundation-callout;
-@include foundation-close-button;
-@include foundation-drilldown-menu;
-@include foundation-dropdown;
-@include foundation-dropdown-menu;
+// @include foundation-accordion;
+// @include foundation-accordion-menu;
+// @include foundation-badge;
+// @include foundation-breadcrumbs;
+// @include foundation-button-group;
+// @include foundation-callout;
+// @include foundation-close-button;
+// @include foundation-drilldown-menu;
+// @include foundation-dropdown;
+// @include foundation-dropdown-menu;
 @include foundation-flex-video;
 @include foundation-label;
 @include foundation-media-object;
 @include foundation-menu;
-@include foundation-off-canvas;
+// @include foundation-off-canvas;
 @include foundation-orbit;
-@include foundation-pagination;
-@include foundation-progress-bar;
-@include foundation-slider;
-@include foundation-sticky;
-@include foundation-reveal;
-@include foundation-switch;
+// @include foundation-pagination;
+// @include foundation-progress-bar;
+// @include foundation-slider;
+// @include foundation-sticky;
+// @include foundation-reveal;
+// @include foundation-switch;
 @include foundation-table;
-@include foundation-tabs;
-@include foundation-thumbnail;
+// @include foundation-tabs;
+// @include foundation-thumbnail;
 @include foundation-title-bar;
-@include foundation-tooltip;
+// @include foundation-tooltip;
 @include foundation-top-bar;
 
+$dark: #232d3d;
 
+select:focus {
+	outline:none;
+}
 /* Menu */
 
 .top-bar {
-	ul {
-		li {
-			a {
-
+	line-height: 80px;
+	.menu {
+		> li {
+			> a {
+				line-height: 80px;
+				color: #7f8388;
+				font-size: 12px;
+				font-family: $header-font-family;
+				&:hover {
+					color: $white;
+				}
+				&:active {
+					color:$primary-color;
+				}
 			}
 		}
 	}
+}
+button,
+.button {
+	@include button;
+	line-height: 40px;
+	min-height: 40px;
+	box-shadow: 0 3px 0 darken($secondary-color, 20%);
+
+	&.success {
+		box-shadow: 0 3px 0 darken($success-color, 20%);font-weight:700;
+		font-weight:700;
+	}
+
+}
+
+@media #{breakpoint(medium)}
+{
+	.float-left-medium {
+		float:left;
+	}
+}
+[type="text"] {
+	font-weight: 700;
+	line-height: 50px;
+	height: 50px;
+	padding: 0 20px;
+}
+// ba-compare
+.ba-compare {
+	background-color: $primary-color;
+	border-top: 10px solid #ee5f15;
+	padding: 40px 0 100px;
+	text-align: center;
+	&__title-wrap {
+		max-width: 716px;
+		margin: 0 auto;
+	}
+	& h1 {
+		font-family: "Raleway", Arial, sans-serif;
+		font-weight: 300;
+		line-height: 1.25;
+		color: #FFF;
+		margin-bottom: 35px;
+		text-align: center;
+	}
+	& .button {
+		font-weight:700;
+	}
+}
+@import "../css/slick.css";
+.ba-slider {
+	.ba-slide {
+		min-height: 54vh;
+		border: none;
+		outline:none;
+		& img {
+			margin: 0 auto;
+		}
+	}
+	.slick-arrow {
+		position: absolute;
+		z-index: 20;
+		top: 35%;
+		width: 28px;
+		height: 36px;
+		border: none;
+		background: no-repeat 50%;
+		text-indent: -99999px;
+		background-size: contain;
+		border-radius: 50%;
+		outline: none;
+		box-shadow:none;
+		transition:width .3s ease-in;
+		transition:height .3s ease-in;
+		&:focus, &:active, &:hover {
+			width: 59px;
+			height: 74px;
+		}
+		@media (min-width:380px) {
+			top: 40%;
+		}
+		@media (min-width:450px) {
+			top: 45%;
+		}
+		@media (min-width:500px) {
+			top: 48%;
+		}
+	}
+	.slick-prev {
+		background-image: url(../img/prev.svg);
+		left: 10px;
+	}
+	.slick-next {
+		background-image: url(../img/next.svg);
+		right: 10px;
+	}
+}
+.ba-compare form {
+	width: 300px;
+	height: 120px;
+	margin: 0 auto;
+	font-size: 0;
+	@media (min-width:680px){
+		width: 630px;
+		height: 51px;
+	}
+	& .button {
+		margin-top: 20px;
+	}
+}
+.ba-compare__select-wrap {
+	position: relative;
+	z-index: 1;
+	display: inline-block;
+	background: linear-gradient(to left, $secondary-color 0, $secondary-color 51px, #fff 51px, #fff 100%);
+	height: 51px;
+	&:first-of-type {
+		margin-bottom: 20px;
+		@media (min-width:680px) {
+			margin-bottom: 0;
+		}
+	}
+}
+.ba-compare__select {
+	width: 300px;
+	height: 51px;
+	box-shadow:0 2px 0 $medium-gray;
+	font-weight:700;
+	position: relative;
+	color: #898989;
+	padding-left: 50px;
+	padding-right: 20px;
+	background:transparent url(../img/drop.svg) 265px 50% no-repeat;
+}
+.ba-compare__select--chart-pie {
+	margin-right: 20px;
+	&:before {
+		content: "";
+		display: block;
+		width: 19px;
+		height: 19px;
+		position: absolute;
+		top: 15px;
+		left: 23px;
+		background: url(../img/chart-pie.svg) 50% no-repeat;
+		z-index: 10;
+	}
+}
+.ba-compare__select--icloud:before {
+	content: "";
+	display: block;
+	width: 25px;
+	height: 16px;
+	position: absolute;
+	top: 17px;
+	left: 23px;
+	background: url(../img/icloud.svg) 50% no-repeat;
+	z-index: 10;
+}
+// ba-about
+.ba-about {
+	padding: 55px 0 87px;
+	background: $body-background;
+	& h2 a {
+		color: #232d3b;
+		transition: color .3s ease-in;
+		&:hover {
+			color:$primary-color;
+		}
+	}
+	&__descr {
+		color: $primary-color;
+		height: 90px;
+		overflow: hidden;
+		margin-bottom: 25px;
+	}
+	&__text {
+		height: 159px;
+		overflow: hidden;
+	}
+}
+// ba-works
+.ba-works {
+	padding: 0 0 100px;
+	background: #5dbab5;
+	background: linear-gradient(to bottom, $body-background 0, $body-background 50px, #fff 51px, #fff 235px, #5dbab5 236px, #5dbab5 100%);
+}
+.ba-slider__features {
+	text-align: center;
+	.ba-slide {
+		min-height: 100vh;
+		border: none;
+		outline:none;
+	}
+	.slick-arrow {
+		// display: none;
+		visibility: hidden;
+		// margin-top: -60px;
+		width: 0;
+		min-height: 0;
+		line-height: 0;
+		padding: 0;
+		border: none;
+	}
+	.slick-dots {
+		z-index: 2;
+		list-style: none;
+		padding: 0;
+		top: 100%;
+		button {
+			width: 12px;
+			min-height: 12px;
+			line-height: 12px;
+			text-indent: -9999px;
+			background: #35817E;
+			padding: 0;
+			border-radius: 6px;
+			display: block;
+			transition: background .3s ease-in;
+			border: none;
+			box-shadow: none;
+			&:focus, &:hover {
+				background: #4B9F9B;
+				outline:none;
+			}
+		}
+		.slick-active {
+			button {
+			}
+		}
+		li {
+			display: inline-block;
+			margin-left: 16px;
+		}
+		li:first-of-type {
+			margin-left: 0;
+		}
+	}
+}
+// ba-footer
+.ba-footer {
+	padding: 45px 0 415px;
+	border-top:15px solid #0D131A;
+	background: $dark;
+	&__descr {
+		height: 24px;
+		max-width: 440px;
+		overflow: hidden;
+		color: #4c5c74;
+		margin: 15px 0 20px;
+	}
+	& .ba-social__icon {
+		width: 60px;
+		height: 51px;
+		font-size: 26px;
+		line-height: 51px;
+		text-align: center;
+		color: #fff;
+		border-radius: 3px;
+		margin-left: 0;
+		&:first-of-type {
+			margin-left: 0;
+		}
+		&:hover {
+			opacity:0.7;
+			color:$dark;
+		}
+		@media (min-width:960px) {
+			margin-left: 13px;
+		}
+		@media #{breakpoint(medium)}{
+			margin-left: 0;
+			margin-bottom: 5px;
+		}
+
+		@media (min-width:960px) {
+			margin-left: 13px;
+			margin-bottom: 0;
+		}
+	}
+}
+.ba-footer__form {
+	max-width: 540px;
+	font-size: 0;
+	position: relative;
+	margin-bottom: 50px;
+	& .ba-button {
+		position: absolute;
+		top: 19px;
+		right: 33px;
+		display: block;
+		height: 19px;
+		width: 28px;
+		border: none;
+		box-shadow: none;
+		background: url(../img/email.svg) 50% no-repeat;
+	}
+	@media #{breakpoint(medium)}{
+		margin-bottom: 0;
+	}
+}
+[type="email"] {
+	font-weight: 700;
+	padding: 0 80px 0 30px;
+	height: 75px;
+	line-height: 75px;
+	max-width: 540px;
+	display: inline-block;
+	margin: 0;
+}
+.fa-rss {
+	background: #FFAA16;
+	box-shadow: 0 3px 0 #d38600;
+}
+.fa-futbol-o {
+	background: #EC5B95;
+	box-shadow: 0 3px 0 #d30054;
+}
+.fa-twitter {
+	background: #00AEEF;
+	box-shadow: 0 3px 0 #0081b1;
+
+}
+.fa-facebook {
+	background: #0054A6;
+	box-shadow: 0 3px 0 #003a72;
 }

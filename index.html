@@ -4,44 +4,130 @@
 	<meta charset="utf-8">
 	<meta http-equiv="x-ua-compatible" content="ie=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Foundation for Sites</title>
+	<title>Host Compare</title>
 	<link rel="stylesheet" href="css/app.css">
-	<link rel="icon" href="favicon.png">
+	<link rel="icon" href="favicon.ico">
 	<link rel="apple-touch-icon-precomposed" href="apple-touch-icon.png">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
 </head>
 <body>
 
-	<div class="top-bar">
-		<div class="top-bar-title">
-			<a href="#" class="ba-logo">Logo</a>
-
-			<span class="float-right hide-for-medium" data-responsive-toggle="responsive-menu" data-hide-for="medium">
-				<span class="menu-icon dark" data-toggle></span>
-			</span>
-		</div>
-
-		<div id="responsive-menu">
-			<div class="top-bar-right">
-				<ul class="vertical medium-horizontal menu">
-					<li>
-						<a href="#">One</a>
-					</li>
-					<li><a href="#">Two</a></li>
-					<li><a href="#">Three</a></li>
-				</ul>
+	<header class="top-bar">
+		<div class="row column">
+			<div class="top-bar-title">
+				<span class="float-right hide-for-medium" data-responsive-toggle="responsive-menu" data-hide-for="medium">
+					<span class="menu-icon" data-toggle></span>
+				</span>
+				<a href="#" class="ba-logo"><img src="img/logo.png" alt="Logo"></a>
+			</div>
+			<div id="responsive-menu">
+				<div class="top-bar-right">
+					<ul class="vertical medium-horizontal menu float-left-medium">
+						<li><a href="#compare">Compare Hosting  Providers</a></li>
+						<li><a href="#about">About</a></li>
+						<li><a href="#works">How it Works</a></li>
+						<li><a href="#contact">Contact</a></li>
+					</ul>
+					<div class="float-left-medium">
+						<a href="#" class="button success">+ Sign Up</a>
+					</div>
+				</div>
 			</div>
 		</div>
-	</div>
+	</header>
 
 	<main>
-		<div class="row">
-			<div class="columns">
-
+		<section id="compare" class="ba-compare">
+			<div class="row column">
+				<div class="ba-compare__title-wrap">
+					<h1>Find the right cloud Hosting without the Fluffy white stuff.</h1>
+				</div>
+				<div class="ba-slider">
+					<div class="ba-slide" data-compare="ba-cloud">
+						<img src="img/cloud.png" alt="Cloud">
+					</div>
+					<div class="ba-slide" data-compare="ba-cloud">
+						<img src="img/cloud.png" alt="Cloud">
+					</div>
+					<div class="ba-slide" data-compare="ba-cloud">
+						<img src="img/cloud.png" alt="Cloud">
+					</div>
+				</div>
+				<form action="#" method="post">
+					<div class="ba-compare__select-wrap ba-compare__select--chart-pie">
+						<select class="ba-compare__select ">
+							<option value="husker">Diskspace Amount</option>
+							<option value="starbuck">Starbuck</option>
+							<option value="hotdog">Hot Dog</option>
+							<option value="apollo">Apollo</option>
+						</select>
+					</div>
+					<div class="ba-compare__select-wrap ba-compare__select--icloud">
+						<select class="ba-compare__select">
+							<option value="husker">Operating System</option>
+							<option value="starbuck">Starbuck</option>
+							<option value="hotdog">Hot Dog</option>
+							<option value="apollo">Apollo</option>
+						</select>
+					</div>
+					<a href="#" class="button">+ Get a quote Now</a>
+				</form>
 			</div>
-		</div>
+		</section>
+		<section id="about" class="ba-about">
+			<div class="row column">
+				<div class="medium-6 column">
+					<h2><a href="#">We use 100% Real Clouds</a></h2>
+					<p class="ba-about__descr">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam lacus felis, sagittis id hendrerit nec, facilisis non ligula. Nullam eget imperdiet augue. Suspendisse lacus nulla, tempor eget porta a, accumsan at erat. Etiam quis sem orci. Praesent elit sem, volutpat id malesuada a, ornare non turpis. Aliquam felis ante, condimentum eu tempor eu, dapibus ut lacus. Vivamus egestas, sem ut semper imperdiet, felis nulla aliquet purus, tincidunt auctor tortor sapien vitae dolor. Nam nunc lacus, ultrices eget interdum id, pharetra at sapien. Nunc id lorem at nibh consectetur laoreet. Pellentesque sollicitudin diam mi, vel sodales orci. Nunc molestie pretium blandit. Suspendisse non eros non quam semper egestas ac in sem. Aenean blandit tincidunt sapien, quis ornare dui pharetra quis. Proin nec sem at felis porttitor convallis. Praesent consequat adipiscing orci, at sollicitudin purus consectetur luctus.
+					</p>
+					<p class="ba-about__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam lacus felis, sagittis id hendrerit nec, facilisis non ligula. Nullam eget imperdiet augue. Suspendisse lacus nulla, tempor eget porta a, accumsan at erat. Etiam quis sem orci. Praesent elit sem, volutpat id malesuada a, ornare non turpis. Aliquam felis ante, condimentum eu tempor eu, dapibus ut lacus. Vivamus egestas, sem ut semper imperdiet, felis nulla aliquet purus, tincidunt auctor tortor sapien vitae dolor. Nam nunc lacus, ultrices eget interdum id, pharetra at sapien. Nunc id lorem at nibh consectetur laoreet. Pellentesque sollicitudin diam mi, vel sodales orci. Nunc molestie pretium blandit. Suspendisse non eros non quam semper egestas ac in sem. Aenean blandit tincidunt sapien, quis ornare dui pharetra quis. Proin nec sem at felis porttitor convallis. Praesent consequat adipiscing orci, at sollicitudin purus consectetur luctus.</p>
+				</div>
+				<div class="medium-6 column">
+					<h2><a href="#">We don’t hurt kittens</a></h2>
+					<p class="ba-about__descr">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam lacus felis, sagittis id hendrerit nec, facilisis non ligula. Nullam eget imperdiet augue. Suspendisse lacus nulla, tempor eget porta a, accumsan at erat. Etiam quis sem orci. Praesent elit sem, volutpat id malesuada a, ornare non turpis. Aliquam felis ante, condimentum eu tempor eu, dapibus ut lacus. Vivamus egestas, sem ut semper imperdiet, felis nulla aliquet purus, tincidunt auctor tortor sapien vitae dolor. Nam nunc lacus, ultrices eget interdum id, pharetra at sapien. Nunc id lorem at nibh consectetur laoreet. Pellentesque sollicitudin diam mi, vel sodales orci. Nunc molestie pretium blandit. Suspendisse non eros non quam semper egestas ac in sem. Aenean blandit tincidunt sapien, quis ornare dui pharetra quis. Proin nec sem at felis porttitor convallis. Praesent consequat adipiscing orci, at sollicitudin purus consectetur luctus.
+					</p>
+					<p class="ba-about__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam lacus felis, sagittis id hendrerit nec, facilisis non ligula. Nullam eget imperdiet augue. Suspendisse lacus nulla, tempor eget porta a, accumsan at erat. Etiam quis sem orci. Praesent elit sem, volutpat id malesuada a, ornare non turpis. Aliquam felis ante, condimentum eu tempor eu, dapibus ut lacus. Vivamus egestas, sem ut semper imperdiet, felis nulla aliquet purus, tincidunt auctor tortor sapien vitae dolor. Nam nunc lacus, ultrices eget interdum id, pharetra at sapien. Nunc id lorem at nibh consectetur laoreet. Pellentesque sollicitudin diam mi, vel sodales orci. Nunc molestie pretium blandit. Suspendisse non eros non quam semper egestas ac in sem. Aenean blandit tincidunt sapien, quis ornare dui pharetra quis. Proin nec sem at felis porttitor convallis. Praesent consequat adipiscing orci, at sollicitudin purus consectetur luctus.</p>
+				</div>
+			</div>
+		</section>
+		<section id="works" class="ba-works">
+			<div class="ba-slider__features">
+				<div class="ba-slide" data-works="ba-cloud">
+					<img src="img/slide-features.png" alt="Slide features">
+				</div>
+				<div class="ba-slide" data-works="ba-cloud">
+					<img src="img/slide-features.png" alt="Slide features">
+				</div>
+				<div class="ba-slide" data-works="ba-cloud">
+					<img src="img/slide-features.png" alt="Slide features">
+				</div>
+				<div class="ba-slide" data-works="ba-cloud">
+					<img src="img/slide-features.png" alt="Slide features">
+				</div>
+			</div>
+		</section>
 	</main>
 
+	<footer id="contact" class="ba-footer">
+		<div class="row column">
+			<div class="medium-8 column">
+				<a href="#" class="ba-logo"><img src="img/logo.png" alt="Logo"></a>
+				<p class="ba-footer__descr">It'll be ute when mad as a waratah. You little ripper rort where as busy as a captain cook.  We're going bushranger flamin shazza got us some pot. Lets get some coathanger piece of piss built like a brickie. As cross as a grundies no dramas stands out like a chuck a sickie. As dry as a freckle piece of piss stands out like a vb. battler mate he's got a massive spewin'. As cross as a bunyip mate he's got a massive yabber. He's got a massive vee dub flamin built like a dole bludger.</p>
+				<form action="#" class="ba-footer__form" method="post">
+					<input type="email" name="email" required placeholder="Leave your email cobber">
+					<button class="ba-button" type="submit"></button>
+				</form>
+			</div>
+			<div class="medium-4 column">
+				<a href="#" class="ba-social__icon fa fa-rss"></a>
+				<a href="#" class="ba-social__icon fa fa-futbol-o"></a>
+				<a href="#" class="ba-social__icon fa fa-twitter"></a>
+				<a href="#" class="ba-social__icon fa fa-facebook"></a>
+			</div>
+		</div>
+	</footer>
 	<script src="js/jquery.min.js"></script>
+	<script src="js/slick.min.js"></script>
 	<script src="js/what-input.min.js"></script>
 	<script src="js/foundation.min.js"></script>
 	<script src="js/app.js"></script>
