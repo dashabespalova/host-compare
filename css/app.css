@@ -3100,6 +3100,7 @@ button.success,
   border-top: 10px solid #ee5f15;
   padding: 40px 0 100px;
   text-align: center;
+  position: relative;
 }
 
 .ba-compare__title-wrap {
@@ -3121,13 +3122,12 @@ button.success,
 }
 
 .ba-slider .ba-slide {
-  min-height: 54vh;
   border: none;
   outline: none;
 }
 
 .ba-slider .ba-slide img {
-  margin: 0 auto;
+  margin: 0 auto 20px;
 }
 
 .ba-slider .slick-arrow {
@@ -3182,7 +3182,6 @@ button.success,
 
 .ba-compare form {
   width: 300px;
-  height: 120px;
   margin: 0 auto;
   font-size: 0;
 }
@@ -3190,7 +3189,6 @@ button.success,
 @media (min-width: 680px) {
   .ba-compare form {
     width: 630px;
-    height: 51px;
   }
 }
 
@@ -3256,8 +3254,91 @@ button.success,
   z-index: 10;
 }
 
+.ba-compare__button-group {
+  margin: 30px auto 0;
+  width: 210px;
+  font-size: 0;
+  box-shadow: 0 3px 0 #4aaaa5;
+  border-radius: 5px;
+}
+
+@media (min-width: 40em) {
+  .ba-compare__button-group {
+    position: absolute;
+    top: 20%;
+    left: 20px;
+    width: 70px;
+    margin: 0;
+  }
+}
+
+.ba-compare__button-group .button {
+  font-size: 23px;
+  line-height: 23px;
+  padding: 0;
+  border: none;
+  box-shadow: none;
+}
+
+.ba-compare__button-group .button:first-of-type {
+  border-radius: 5px 0 0 0;
+}
+
+@media (min-width: 40em) {
+  .ba-compare__button-group .button:first-of-type {
+    border-radius: 5px 5px 0 0;
+  }
+}
+
+.ba-compare__button-group .button:last-of-type {
+  border-radius: 0 5px 0 0;
+}
+
+@media (min-width: 40em) {
+  .ba-compare__button-group .button:last-of-type {
+    border-radius: 0;
+  }
+}
+
+.ba-compare__button-group .button .ba-compare__link {
+  display: block;
+  padding: 20px 0;
+  width: 70px;
+  transition: background .3s ease-in;
+}
+
+.ba-compare__button-group .button .ba-compare__link:hover {
+  background: #307d79;
+}
+
+.ba-compare__button-group .button .fa-comments {
+  background: #36aaa4;
+  border-radius: 5px 0 0 0;
+}
+
+@media (min-width: 40em) {
+  .ba-compare__button-group .button .fa-comments {
+    border-radius: 5px 5px 0 0;
+  }
+}
+
+.ba-compare__button-group .button .fa-envelope {
+  background: #80d3cf;
+}
+
+.ba-compare__button-group .button .fa-heart {
+  background: #5dbab5;
+  border-radius: 0 5px 0 0;
+}
+
+@media (min-width: 40em) {
+  .ba-compare__button-group .button .fa-heart {
+    border-radius: 0;
+  }
+}
+
 .ba-about {
-  padding: 55px 0 87px;
+  padding: 55px 0 135px;
   background: #f6f5f2;
 }
 
@@ -3285,26 +3366,22 @@ button.success,
 .ba-works {
   padding: 0 0 100px;
   background: #5dbab5;
-  background: linear-gradient(to bottom, #f6f5f2 0, #f6f5f2 50px, #fff 51px, #fff 235px, #5dbab5 236px, #5dbab5 100%);
+  background: linear-gradient(to bottom, #fff 0px, #fff 20%, #5dbab5 calc(20% + 1px), #5dbab5 100%);
 }
 
 .ba-slider__features {
   text-align: center;
+  position: relative;
+  top: -50px;
 }
 
 .ba-slider__features .ba-slide {
-  min-height: 100vh;
   border: none;
   outline: none;
 }
 
-.ba-slider__features .slick-arrow {
-  visibility: hidden;
-  width: 0;
-  min-height: 0;
-  line-height: 0;
-  padding: 0;
-  border: none;
+.ba-slider__features .ba-slide img {
+  margin: 0 auto;
 }
 
 .ba-slider__features .slick-dots {
@@ -3331,6 +3408,10 @@ button.success,
 .ba-slider__features .slick-dots button:focus, .ba-slider__features .slick-dots button:hover {
   background: #4B9F9B;
   outline: none;
+}
+
+.ba-slider__features .slick-dots .slick-active button {
+  background: #4B9F9B;
 }
 
 .ba-slider__features .slick-dots li {

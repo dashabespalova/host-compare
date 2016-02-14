@@ -1,17 +1,20 @@
-// $(document).foundation();
+
 ;(function($){
+	$(document).foundation();
 	$(function(){
 		var slider = $('.ba-slider');
 		sliderFeatures = $('.ba-slider__features');
 		slider.slick({
 			gorizontal:true,
-			infinity: false,
+			infinity: false
 
 		});
 		sliderFeatures.slick({
-dots:true,
+			dots:true,
 			gorizontal:true,
 			infinity: false,
+			nextArrow:false,
+			prevArrow:false
 
 		});
 		slider.on('beforeChange', function(event, slick, currentSlide, nextSlide){

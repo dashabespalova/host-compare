@@ -100,6 +100,7 @@ button,
 	border-top: 10px solid #ee5f15;
 	padding: 40px 0 100px;
 	text-align: center;
+	position: relative;
 	&__title-wrap {
 		max-width: 716px;
 		margin: 0 auto;
@@ -119,11 +120,11 @@ button,
 @import "../css/slick.css";
 .ba-slider {
 	.ba-slide {
-		min-height: 54vh;
+
 		border: none;
 		outline:none;
 		& img {
-			margin: 0 auto;
+			margin: 0 auto 20px;
 		}
 	}
 	.slick-arrow {
@@ -166,12 +167,10 @@ button,
 }
 .ba-compare form {
 	width: 300px;
-	height: 120px;
 	margin: 0 auto;
 	font-size: 0;
 	@media (min-width:680px){
 		width: 630px;
-		height: 51px;
 	}
 	& .button {
 		margin-top: 20px;
@@ -200,6 +199,7 @@ button,
 	padding-left: 50px;
 	padding-right: 20px;
 	background:transparent url(../img/drop.svg) 265px 50% no-repeat;
+
 }
 .ba-compare__select--chart-pie {
 	margin-right: 20px;
@@ -226,9 +226,68 @@ button,
 	background: url(../img/icloud.svg) 50% no-repeat;
 	z-index: 10;
 }
+.ba-compare__button-group {
+	margin: 30px auto 0;
+	width: 210px;
+	font-size: 0;
+	box-shadow:0 3px 0 #4aaaa5;
+	border-radius:5px;
+	@media #{breakpoint(medium)}{
+		position: absolute;
+		top: 20%;
+		left: 20px;
+		width: 70px;
+		margin: 0;
+	}
+	& .button {
+		font-size: 23px;
+		line-height: 23px;
+		padding: 0;
+		border: none;
+		box-shadow: none;
+		&:first-of-type {
+			border-radius:5px 0 0 0;
+			@media #{breakpoint(medium)}{
+				border-radius:5px 5px 0 0;
+			}
+		}
+		&:last-of-type {
+			border-radius:0 5px 0 0;
+			@media #{breakpoint(medium)}{
+				border-radius:0;
+			}
+		}
+		.ba-compare__link {
+			display: block;
+			padding: 20px 0;
+			width: 70px;
+			transition: background .3s ease-in;
+			&:hover {
+				background: darken($secondary-color, 30%);
+			}
+		}
+		& .fa-comments {
+			background: #36aaa4;
+			border-radius:5px 0 0 0;
+			@media #{breakpoint(medium)} {
+				border-radius:5px 5px 0 0;
+			}
+		}
+		& .fa-envelope {
+			background: #80d3cf;
+		}
+		& .fa-heart {
+			background: #5dbab5;
+			border-radius:0 5px 0 0;
+			@media #{breakpoint(medium)} {
+				border-radius:0;
+			}
+		}
+	}
+}
 // ba-about
 .ba-about {
-	padding: 55px 0 87px;
+	padding: 55px 0 135px;
 	background: $body-background;
 	& h2 a {
 		color: #232d3b;
@@ -252,30 +311,26 @@ button,
 .ba-works {
 	padding: 0 0 100px;
 	background: #5dbab5;
-	background: linear-gradient(to bottom, $body-background 0, $body-background 50px, #fff 51px, #fff 235px, #5dbab5 236px, #5dbab5 100%);
+	background: linear-gradient(to bottom, #fff 0px, #fff 20%, #5dbab5 calc(20% + 1px), #5dbab5 100%);
 }
 .ba-slider__features {
 	text-align: center;
+	position: relative;
+	top: -50px;
+
 	.ba-slide {
-		min-height: 100vh;
 		border: none;
 		outline:none;
-	}
-	.slick-arrow {
-		// display: none;
-		visibility: hidden;
-		// margin-top: -60px;
-		width: 0;
-		min-height: 0;
-		line-height: 0;
-		padding: 0;
-		border: none;
+		& img {
+			margin: 0 auto;
+		}
 	}
 	.slick-dots {
 		z-index: 2;
 		list-style: none;
 		padding: 0;
 		top: 100%;
+
 		button {
 			width: 12px;
 			min-height: 12px;
@@ -295,6 +350,7 @@ button,
 		}
 		.slick-active {
 			button {
+				background: #4B9F9B;
 			}
 		}
 		li {
