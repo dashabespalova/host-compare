@@ -203,6 +203,7 @@ button,
 }
 .ba-compare__select--chart-pie {
 	margin-right: 20px;
+
 	&:before {
 		content: "";
 		display: block;
@@ -213,6 +214,7 @@ button,
 		left: 23px;
 		background: url(../img/chart-pie.svg) 50% no-repeat;
 		z-index: 10;
+		pointer-events:none;
 	}
 }
 .ba-compare__select--icloud:before {
@@ -225,6 +227,7 @@ button,
 	left: 23px;
 	background: url(../img/icloud.svg) 50% no-repeat;
 	z-index: 10;
+	pointer-events:none;
 }
 .ba-compare__button-group {
 	margin: 30px auto 0;

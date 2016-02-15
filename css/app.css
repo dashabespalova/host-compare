@@ -3240,6 +3240,7 @@ button.success,
   left: 23px;
   background: url(../img/chart-pie.svg) 50% no-repeat;
   z-index: 10;
+  pointer-events: none;
 }
 
 .ba-compare__select--icloud:before {
@@ -3252,6 +3253,7 @@ button.success,
   left: 23px;
   background: url(../img/icloud.svg) 50% no-repeat;
   z-index: 10;
+  pointer-events: none;
 }
 
 .ba-compare__button-group {
